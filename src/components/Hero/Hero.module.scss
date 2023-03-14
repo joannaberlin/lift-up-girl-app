@@ -1,0 +1,13 @@
+@import '../../styles/settings.scss';
+@import '../../styles/mixins';
+
+.image_wrapper img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	// 768px window width and more
+	@include md {
+		width: auto;
+	}
+}
