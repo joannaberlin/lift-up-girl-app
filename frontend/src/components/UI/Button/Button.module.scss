@@ -1,4 +1,5 @@
 @import '../../../styles/settings.scss';
+@import '../../../styles/mixins';
 
 .button {
 	background-color: $color-blue-sky;
@@ -6,7 +7,10 @@
 	padding: 15px 30px;
 	margin: 10px 10px;
 	border-radius: $radius;
-	font-size: $base-size * 1.3;
 	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 	cursor: pointer;
+
+	@include sm {
+		font-size: $base-size * 1.3;
+	}
 }

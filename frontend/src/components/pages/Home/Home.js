@@ -3,6 +3,7 @@ import Hero from '../../Hero/Hero';
 import styles from './Home.module.scss';
 import TextContainer from '../../UI/TextContainer/TextContainer';
 import Button from '../../UI/Button/Button';
+import LinkUI from '../../UI/LinkUI/LinkUI';
 
 const Homepage = () => {
 	return (
@@ -16,9 +17,9 @@ const Homepage = () => {
 					by tracking your progress.
 				</p>
 				<p>
-					Check our blog with health related topics if you aren't convinced yet
-					that Girl, you can lift too. You can find there articles about health
-					benefits of strength training.
+					Check our <LinkUI to='/blog'>blog</LinkUI> with health related topics
+					if you aren't convinced yet, that Girl, you can lift too. Grab your
+					favourite coffee and read about health benefits of strength training.
 				</p>
 				<p>Aaaah and Girl, don't worry, you won't get bulky!</p>
 				<p>You ready, Girl?</p>
