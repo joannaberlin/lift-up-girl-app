@@ -1,5 +1,5 @@
 import styles from './Hero.module.scss';
-import logo from '../../assets/LiftUpLogo.png';
+import logo from '../../../assets/LiftUpLogo.png';
 
 const Hero = () => {
 	return (

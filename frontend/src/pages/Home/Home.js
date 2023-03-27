@@ -1,14 +1,13 @@
-import Container from '../../UI/Container/Container';
-import Hero from '../../Hero/Hero';
+import Container from '../../components/UI/Container/Container';
 import styles from './Home.module.scss';
-import TextContainer from '../../UI/TextContainer/TextContainer';
-import Button from '../../UI/Button/Button';
-import LinkUI from '../../UI/LinkUI/LinkUI';
+import TextContainer from '../../components/UI/TextContainer/TextContainer';
+import Button from '../../components/UI/Button/Button';
+import LinkUI from '../../components/UI/LinkUI/LinkUI';
+import { Link } from 'react-router-dom';
 
 const Homepage = () => {
 	return (
 		<Container>
-			<Hero />
 			<TextContainer>
 				<p>Lifting weights make you physically strong but mentally too.</p>
 				<p>
@@ -17,7 +16,7 @@ const Homepage = () => {
 					by tracking your progress.
 				</p>
 				<p>
-					Check our <LinkUI to='/blog'>blog</LinkUI> with health related topics
+					Check our <LinkUI to='blog'>blog</LinkUI> with health related topics
 					if you aren't convinced yet, that Girl, you can lift too. Grab your
 					favourite coffee and read about health benefits of strength training.
 				</p>
@@ -25,8 +24,9 @@ const Homepage = () => {
 				<p>You ready, Girl?</p>
 			</TextContainer>
 			<div className={styles.buttons_wrapper}>
-				<Button>Log In</Button>
-				<Button>Sign Up</Button>
+				<Link to='auth'>
+					<Button>Oh, yeah!</Button>
+				</Link>
 			</div>
 		</Container>
 	);
