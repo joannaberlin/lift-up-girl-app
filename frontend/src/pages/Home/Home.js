@@ -24,7 +24,7 @@ const Homepage = () => {
 				<p>You ready, Girl?</p>
 			</TextContainer>
 			<div className={styles.buttons_wrapper}>
-				<Link to='auth'>
+				<Link to='/auth?mode=login'>
 					<Button>Oh, yeah!</Button>
 				</Link>
 			</div>

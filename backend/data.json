@@ -1,3 +1,1 @@
-{
-	"users": []
-}
+{"users":[{"email":"test@test.com","password":"$2a$12$M5vpfsA39CdvRgE2RY2IuuG2Wb2.KHoH/uC5.cSmqAo/YXQJHGJHq","id":"023e1a95-28c7-4a7e-905c-bd77ea7d1c19"},{"email":"test20@test.com","password":"$2a$12$aabqwzbmZllER9RzSeE73eVwUvfimROGZT5wkob0ZVVwyKEd0CeRu","id":"fa39481e-ca22-4bb1-b742-f477f09b510d"}]}
