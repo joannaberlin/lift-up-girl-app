@@ -1,6 +1,9 @@
-import { Form, useRouteLoaderData } from 'react-router-dom';
+import { Form, useRouteLoaderData, Link } from 'react-router-dom';
 import styles from './Hero.module.scss';
 import logo from '../../../assets/LiftUpLogo.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+import { faRightToBracket } from '@fortawesome/free-solid-svg-icons';
 
 const Hero = () => {
 	const token = useRouteLoaderData('root');
@@ -12,8 +15,17 @@ const Hero = () => {
 			</div>
 			{token && (
 				<Form action='/logout' method='post'>
-					<button>Log out</button>
+					<button className={styles.button}>
+						<FontAwesomeIcon icon={faRightFromBracket} />
+					</button>
 				</Form>
+			)}
+			{!token && (
+				<Link to='auth'>
+					<button className={styles.button}>
+						<FontAwesomeIcon icon={faRightToBracket} />
+					</button>
+				</Link>
 			)}
 		</>
 	);

@@ -5,6 +5,8 @@ import {
 	useActionData,
 	useNavigation,
 } from 'react-router-dom';
+import Button from '../../UI/Button/Button';
+import LinkUI from '../../UI/LinkUI/LinkUI';
 
 import styles from './AuthForm.module.scss';
 
@@ -17,7 +19,7 @@ const AuthForm = () => {
 	const isSubmitting = navigation.state === 'submitting';
 
 	return (
-		<>
+		<div className={styles.form_wrapper}>
 			<Form method='post' className={styles.form}>
 				<h1>{isLogin ? 'Log in' : 'Sign up'}</h1>
 				{data && data.errors && (
@@ -37,15 +39,18 @@ const AuthForm = () => {
 					<input id='password' type='password' name='password' required />
 				</p>
 				<div className={styles.actions}>
-					<Link to={`?mode=${isLogin ? 'signup' : 'login'}`}>
+					<Button disable={isSubmitting.toString()}>
+						{isSubmitting ? 'Submitting...' : 'Save'}
+					</Button>
+					<Link
+						to={`?mode=${isLogin ? 'signup' : 'login'}`}
+						className={styles.signupLink}
+					>
 						{isLogin ? 'Sign up' : 'Log in'}
 					</Link>
-					<button disable={isSubmitting.toString()}>
-						{isSubmitting ? 'Submitting...' : 'Save'}
-					</button>
 				</div>
 			</Form>
-		</>
+		</div>
 	);
 };
 
