@@ -6,7 +6,6 @@ import {
 	useNavigation,
 } from 'react-router-dom';
 import Button from '../../UI/Button/Button';
-import LinkUI from '../../UI/LinkUI/LinkUI';
 
 import styles from './AuthForm.module.scss';
 
@@ -35,7 +34,7 @@ const AuthForm = () => {
 					<input id='email' type='email' name='email' required />
 				</p>
 				<p>
-					<label htmlFor='image'>Password</label>
+					<label htmlFor='password'>Password</label>
 					<input id='password' type='password' name='password' required />
 				</p>
 				<div className={styles.actions}>

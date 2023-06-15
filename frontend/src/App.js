@@ -6,6 +6,7 @@ import Authentication, {
 	action as authAction,
 } from './pages/Authentication/Authentication';
 import ErrorPage from './pages/Error/ErrorPage';
+import Profile from './pages/Profile/Profile';
 import { tokenLoader, checkAuthLoader } from './util/auth';
 import { action as logoutAction } from './pages/Logout/Logout';
 
@@ -30,6 +31,11 @@ const router = createBrowserRouter([
 			{
 				path: 'logout',
 				action: logoutAction,
+			},
+			{
+				path: 'profile',
+				element: <Profile />,
+				loader: checkAuthLoader,
 			},
 		],
 	},

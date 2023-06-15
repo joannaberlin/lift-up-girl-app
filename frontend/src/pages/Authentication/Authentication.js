@@ -45,5 +45,6 @@ export const action = async ({ request }) => {
 	expiration.setHours(expiration.getHours() + 1);
 	localStorage.setItem('expiration', expiration.toISOString());
 
-	return redirect('/');
+	// here should I get user's id and based on that id show UI
+	return redirect('/profile');
 };
